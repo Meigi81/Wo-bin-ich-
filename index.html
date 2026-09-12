@@ -100,7 +100,7 @@
 
           const lat = position.coords.latitude;
           const lon = position.coords.longitude;
-
+          const accuracy = position.coords.accuracy;
           status.innerHTML = "Standort bestimmt";
 
           const geo = geocachingKoordinaten(lat, lon);
@@ -108,6 +108,7 @@
           document.getElementById("daten").innerHTML =
             '<div class="titel">Geocaching-Koordinaten:</div>' +
             geo +
+            '<div>Genauigkeit: ±' + Math.round(accuracy) + ' Meter</div>' +
             '<div id="adresse">Ort wird ermittelt ...</div>';
 
           adresseLaden(lat, lon);
