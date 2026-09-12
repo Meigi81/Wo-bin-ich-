@@ -183,7 +183,7 @@
         const daten = await antwort.json();
 
         const a = daten.address || {};
-        const ort = a.hamlet || a.suburb || a.neighbourhood || a.village || a.town || a.city || "-";
+        const ort = a.suburb || a.neighbourhood || a.quarter || a.hamlet || a.village || a.town || a.city || "-";
         
           
           
